@@ -1,0 +1,37 @@
+.menu li{
+    list-style: none;
+    display: inline-block;/*forma horizontal*/
+    font: bold 14px verdana;
+    border: solid;
+    padding: 50px 50px; /*los pixeles van en sentido de las manecillas del reloj*/
+    margin: 2px; /*espacio entre elementos*/ 
+
+}
+
+.cabecera h1,h6{
+    text-align: left;
+}
+
+.menu{
+    background: LightCoral;
+    text-align: center;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    text-align: center;
+    background: lightblue;
+}
+
+.agrupar{
+
+    border: 1px solid black;
+    background: white;
+    width: 900px;
+    margin: 15px auto;
+}
