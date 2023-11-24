@@ -47,6 +47,6 @@ function dividirNumeros(){
 
 }
 
-function cambiarImagen(){
-    
+function cambiarImagen() {
+    document.getElementById('idimagen1').src="../img/oso-bailando.gif"
 }
