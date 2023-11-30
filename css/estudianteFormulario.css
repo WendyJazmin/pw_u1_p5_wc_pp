@@ -1,0 +1,72 @@
+/*darle un color a todo el fondo*/
+body{
+    background: #59ABE3;
+}
+
+.container{/*eL container siempre tiene 3 elementos*/
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+ 
+}
+
+.form{
+    width: 340px;
+    height: 450px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    padding: 20px 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 0 0 40px -10px #123;
+}
+
+h2{
+    margin: 10px 0px 0px;
+    padding-bottom: 10px;
+    width: 180px;
+    color: #78788c;
+    border-bottom: 3px solid #78788c;
+}
+
+/*para visualizar las etiquetas*/
+p:before{
+
+    content: attr(type);
+    display: block;/*se muestre el bloque completo*/
+    margin:5px 2px ;
+    font-size: 16px;
+    color: #6a14b1;
+    font-weight: bold;
+}
+
+
+input{
+
+    width: 100px;
+    border: 0;
+    border-bottom: 2px solid #bebed2;
+    background: none;/*con none se retira el color de la caja*/
+}
+
+input:focus{
+    border-bottom: 4px solid #c4c4ff;
+}
+
+h1{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+button{
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    background: rgb(181, 180, 255);
+    justify-content: center;
+    align-items:  center;
+}
+
+h2{
+    text-align: center;
+}
