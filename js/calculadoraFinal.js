@@ -1,3 +1,4 @@
+/*dentro de javaScript se puede importar bibliotecas*/ 
 let numero1 = '';
 let numero2 = '';
 let operacionActual = '';

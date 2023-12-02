@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALCULADORA</title>
-    <script src="../js/calculadoraFuncionesDeber.js"></script>
+    <script src="../js/calculadoraFinal.js"></script>
     <link rel="stylesheet" href="../css/esstilosCalculadora.css">
 </head>
 
@@ -17,32 +17,35 @@
             <div class="calculadora-general">
                 <label class="titulo">CALCULADORA</label>
                 <div class="calculadora-numeros">
-                    <input class="col-2" type="text" id="idIngreso" disabled>
+                     <div id="resultado" class="display">Resultado
+                    </div>
+                    <!--input class="col-2" type="text" id="idIngreso" disabled-->
                     <button onclick="reset()">reset</button>
 
-                    <button onclick="numero(0)">0</button>
-                    <button onclick="numero(1)">1</button>
-                    <button onclick="numero(2)">2</button>
+                    <button onclick="asignarNumero(0)">0</button>
+                    <button onclick="asignarNumero(1)">1</button>
+                    <button onclick="asignarNumero(2)">2</button>
                 
-                    <button onclick="numero(3)">3</button>
-                    <button onclick="numero(4)">4</button>
-                    <button onclick="numero(5)">5</button>
+                    <button onclick="asignarNumero(3)">3</button>
+                    <button onclick="asignarNumero(4)">4</button>
+                    <button onclick="asignarNumero(5)">5</button>
 
-                    <button onclick="numero(6)">6</button>
-                    <button onclick="numero(7)">7</button>
-                    <button onclick="numero(8)">8</button>
+                    <button onclick="asignarNumero(6)">6</button>
+                    <button onclick="asignarNumero(7)">7</button>
+                    <button onclick="asignarNumero(8)">8</button>
                 </div>
                     
 
                 <div class="calculadora-operaciones">
                     <button onclick="numero(9)">9</button>
-                    <button onclick="operacion('+')">+</button>
-                    <button onclick="operacion('-')">-</button>
-                    <button onclick="operacion('*')">*</button>
-                    <button onclick="operacion('/')">/</button>
+                    <button onclick="agregarOperacion('+')">+</button>
+                    <button onclick="agregarOperacion('-')">-</button>
+                    <button onclick="agregarOperacion('*')">*</button>
+                    <button onclick="agregarOperacion('/')">/</button>
+                    <button onclick="agregarOperacion('%')">%</button>
                 
-                    <button  onclick="resultado()">=</button>
-                    <label class="resultado" id="idResultado" for="">resultado  </label>
+                    <button onclick="calcular()">=</button>
+                    <!--label class="resultado" id="idResultado" for="">resultado  </label-->
                  </div>
             </div>
 
