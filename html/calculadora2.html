@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/calculadora2.js">
+
+    </script>
+
+    <link rel="stylesheet" href="../css/calculadora2.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <nav>
+
+    </nav>
+    <section>
+        <div class="container">
+            <div class="calculadora">
+                <div id="resultado" class="display">
+                    Resultado
+                </div>
+                <button onclick="resetear()">C</button>
+                <button>&larr;</button>
+                <button onclick="agregarOperacion('%')">%</button>
+                <button onclick="agregarOperacion('/')">/</button>
+                <button onclick="asignarNumero(7)">7</button>
+                <button onclick="asignarNumero(8)">8</button>
+                <button onclick="asignarNumero(9)">9</button>
+                <button onclick="agregarOperacion('*')">*</button>
+                <button onclick="asignarNumero(4)">4</button>
+                <button onclick="asignarNumero(5)">5</button>
+                <button onclick="asignarNumero(6)">6</button>
+                <button onclick="agregarOperacion('-')">-</button>
+                <button onclick="asignarNumero(1)">1</button>
+                <button onclick="asignarNumero(2)">2</button>
+                <button onclick="asignarNumero(3)">3</button>
+                <button onclick="agregarOperacion('+')">+</button>
+                <button onclick="asignarNumero(0)">0</button>
+                <button>.</button>
+                <button onclick="calcular()">=</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
