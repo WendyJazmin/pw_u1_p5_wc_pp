@@ -19,6 +19,7 @@ const app=Vue.createApp({
 
 //OPTIONS API
 
+
 methods:{
 
     cambiarMensaje(){/*si no se tiene argumentos, se puede omitir () */
