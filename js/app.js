@@ -1,7 +1,16 @@
-/*en este tipo de proyectos que se crean configurados con un CDN*/
-/*para las configuraciones de vue*/
+
 console.log("elementos Vue")
 console.log(Vue)
+
+const estudiantes=[{nombre:'Edison',apellido:'Cayambe'},
+{nombre:'Daniel',apellido:'Oviedo'},
+{nombre:'Carla',apellido:'Perez'},
+{nombre:'Julio',apellido:'Castillo'},
+{nombre:'Andrea',apellido:'Teran'}
+]
+
+console.log(estudiantes)
+console.table(estudiantes)
 
 const app=Vue.createApp({
    // template: `
@@ -28,10 +37,30 @@ methods:{
         mensaje='valor cambiado'
     },
 
-    cambiarNumero(valor){
+    cambiarNumero(){
 
-        valor= valor+1;
+        this.valor = this.valor + 1;
+        console.log(this.valor);
+    },
+
+    agregarEstudiante(){
+        console.log("agregando estudiante")
+        const estu={nombre: this.nombre, apellido:this.apellido};
+
+       // this.lista.unshift()
+       //this.lista.push(estu)
+       this.lista.push({nombre: this.nombre, apellido:this.apellido})
+
+
+    },
+
+    presionandoTecla(event){
+        console.log("presionando...")
+        console.log(event.charCode)//se esta enviando un objeto event, que siempre esta presente
+        //se puede usar en cualquier metodo que es invocado por un evento
     }
+
+
 },
 
 watch:{
@@ -40,7 +69,10 @@ watch:{
 data(){/*declaración base de un data. DATA en OPTIONS API, TIENE 1 DECLARACIÓN DIFERENTE*/
     return{
         mensaje:'Hola mundo desde Vue.JS',/*aquí se tiene 2 propiedades reactivas */
-        valor:100
+        valor:100,
+        lista:estudiantes,
+        nombre:null,
+        apellido: null
     }
 }
 })
