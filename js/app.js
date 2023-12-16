@@ -6,7 +6,7 @@ const estudiantes=[{nombre:'Edison',apellido:'Cayambe'},
 {nombre:'Daniel',apellido:'Oviedo'},
 {nombre:'Carla',apellido:'Perez'},
 {nombre:'Julio',apellido:'Castillo'},
-{nombre:'Andrea',apellido:'Teran'}
+{nombre:'',apellido:'Teran'}
 ]
 
 console.log(estudiantes)
@@ -53,7 +53,7 @@ methods:{
 
     },
 
-    presionandoTecla(event){
+    presionandoTecla({charCode}){//la desestruccutacion a objetos se puede aplicar en cualquier lado
         console.log("presionando...")
         console.log(event.charCode)//se esta enviando un objeto event, que siempre esta presente
         //se puede usar en cualquier metodo que es invocado por un evento
@@ -65,6 +65,11 @@ methods:{
             this.agregarEstudiante()
         }
 
+    },
+
+    presionandoTecladoMod(){
+        console.log(this.nombre)
+        console.log('presionando2...')
     }
 
 
@@ -78,7 +83,7 @@ data(){/*declaración base de un data. DATA en OPTIONS API, TIENE 1 DECLARACIÓN
         mensaje:'Hola mundo desde Vue.JS',/*aquí se tiene 2 propiedades reactivas */
         valor:100,
         lista:estudiantes,
-        nombre:null,
+        nombre:undefined,
         apellido: null
     }
 }

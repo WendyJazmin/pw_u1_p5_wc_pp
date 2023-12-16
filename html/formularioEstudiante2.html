@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiante Formulario 2</title>
+    <link rel="stylesheet" href="../css/estudianteFormulario.css">
+
+     <!-- importar el CDN atraves del link-->
+     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div>
+            <header>
+                <h1>ESTUDIANTE</h1>
+            </header>
+            <nav></nav>
+
+            <section>
+                <form class="form" action="https://mipai.com/procesarEtudiante" method="POST">
+                    <div><h2>Nuevo Estudiante</h2></div>
+                    <p type="Nombre: "><input @keypress="presionandoTecla" id="idNombre" type="text" v-model="nombre"></p><!--elemento p de parrafo-->
+                    <p type="Apellido: "><input type="text"></p>
+                    <p type="Hobby: "><input type="text"></p>
+                    <p type="Género: "><input type="text"></p>
+                    <p type="País: "><input type="text"></p>
+                    <div class="boton">
+                    <button>Guardar</button>
+                    </div>
+                </form>
+            </section>
+
+            <footer></footer>
+        </div>
+    </div>
+</body>
+</html>

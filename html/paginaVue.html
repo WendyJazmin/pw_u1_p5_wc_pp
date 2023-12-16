@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- importar el -->
+    <!-- importar el CDN atraves del link-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
  
 </head>
@@ -24,26 +24,28 @@
             <p>{{mensaje}}</p>
             <p>{{valor}}</p>
  
-            <button v-on:click="cambiarMensaje()">Cambiar Mensaje</button>
-            <button v-on:click="cambiarNumero()">Sumar</button>
+            <button @click="cambiarMensaje()">Cambiar Mensaje</button>
+            <button @click="cambiarNumero()">Sumar</button>
  
             <hr />
             <p>{{lista}}</p>
  
             <label for="idNombre">Nombre: </label>
-            <input v-on:keypress="presionandoTecla" id="idNombre" type="text" v-model="nombre">
+            <input @keypress="presionandoTecla" id="idNombre" type="text" v-model="nombre">
             
             <label for="idApellido">Apellido: </label>
-            <input v-on:keypress="metodoApellido" id="idApellido" type="text" v-model="apellido">
+            <input @keypress.enter="presionandoTecladoMod" id="idApellido" type="text" v-model="apellido">
            
-            <button v-on:click="agregarEstudiante()">Agregar</button>
+            <button @click="agregarEstudiante">Agregar</button>
             {{nombre}}
             {{apellido}}
  
  
             <ul>
-                <li v-for="({nombre, apellido}, index) in lista">{{index+1}}: {{nombre}} - {{apellido}}
-                    <button>Editar</button></li>
+                <li  v-for="({nombre, apellido}, index) in lista">
+                    <p v-if="nombre!==''"> {{index+1}}: {{nombre}} - {{apellido}}</p>
+                   
+                    <button v-if="nombre!==''">Editar</button></li><!--si es con true aparece el boton-->
             </ul>
  
  
