@@ -32,8 +32,8 @@ const app=Vue.createApp({
 methods:{
 
     cambiarMensaje(){/*si no se tiene argumentos, se puede omitir () */
-        console.log("Se está cambiando el emnsaje")
-        console.log(mensaje)
+        console.log("Se está cambiando el mensaje")
+        console.log(this.mensaje)
         mensaje='valor cambiado'
     },
 
@@ -47,10 +47,9 @@ methods:{
         console.log("agregando estudiante")
         const estu={nombre: this.nombre, apellido:this.apellido};
 
-       // this.lista.unshift()
-       //this.lista.push(estu)
-       this.lista.push({nombre: this.nombre, apellido:this.apellido})
-
+       // this.lista.unshift(), UNSHITFT: agrega al inicio de la lista
+       //this.lista.push(estu), PUSH:agrega al final de la lista
+       this.lista.push({nombre: this.nombre, apellido:this.apellido})//colocar directamente al final de la lista
 
     },
 
@@ -58,6 +57,14 @@ methods:{
         console.log("presionando...")
         console.log(event.charCode)//se esta enviando un objeto event, que siempre esta presente
         //se puede usar en cualquier metodo que es invocado por un evento
+    },
+
+    metodoApellido(event){
+        console.log(event.charCode)
+        if(event.charCode === 13){
+            this.agregarEstudiante()
+        }
+
     }
 
 
