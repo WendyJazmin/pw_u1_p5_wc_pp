@@ -19,18 +19,32 @@
             </header>
             <nav></nav>
 
-            <section>
+            <section id="myApp2">
                 <form class="form" action="https://mipai.com/procesarEtudiante" method="POST">
                     <div><h2>Nuevo Estudiante</h2></div>
-                    <p type="Nombre: "><input @keypress="presionandoTecla" id="idNombre" type="text" v-model="nombre"></p><!--elemento p de parrafo-->
-                    <p type="Apellido: "><input type="text"></p>
-                    <p type="Hobby: "><input type="text"></p>
-                    <p type="Género: "><input type="text"></p>
-                    <p type="País: "><input type="text"></p>
+
+                    <p for="idNombre" type="Nombre: "><input @keypress="presionandoTecla" id="idNombre" type="text" v-model="nombre"></p>
+                    <p for="idApellido" type="Apellido: "><input  @keypress="presionandoTecla" id="idApellido" type="text" v-model="apellido"></p>
+                    <p for="idHobby" type="Hobby: "><input @keypress="presionandoTecla" id="idHobby" v-model="hobby" type="text"></p>
+                    <p for="idGenero" type="Género: "><input @keypress="presionandoTecla" id="idGenero" v-model="genero" type="text"></p>
+                    <p for="idPais" type="País: "><input @keypress="presionandoTecla" id="idPais" v-model="pais" type="text"></p>
+
                     <div class="boton">
-                    <button>Guardar</button>
+                        <button @click="agregarEstudiante">Agregar Estudiante</button>
                     </div>
                 </form>
+
+                <!--MOSTRAR LOS ESTUDIANTES-->
+                <div>
+                    <ul>
+                        <li v-for="({nombre, apellido}, index) in lista">
+                            <p v-if="nombre!==''">{{index+1}}: {{nombre}} - {{apellido}}, Hobby: {{hobby}}, Género: {{genero}}, País: {{pais}}</p>
+                            <button v-if="nombre!==''">Editar</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <script src="../js/app2.js"></script>
             </section>
 
             <footer></footer>
