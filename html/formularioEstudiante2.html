@@ -20,7 +20,7 @@
             <nav></nav>
 
             <section id="myApp2">
-                <form class="form" action="https://mipai.com/procesarEtudiante" method="POST">
+                <div class="form">
                     <div><h2>Nuevo Estudiante</h2></div>
 
                     <p for="idNombre" type="Nombre: "><input @keypress="presionandoTecla" id="idNombre" type="text" v-model="nombre"></p>
@@ -32,17 +32,36 @@
                     <div class="boton">
                         <button @click="agregarEstudiante">Agregar Estudiante</button>
                     </div>
-                </form>
+                </div>
 
                 <!--MOSTRAR LOS ESTUDIANTES-->
-                <div>
-                    <ul>
-                        <li v-for="({nombre, apellido}, index) in lista">
-                            <p v-if="nombre!==''">{{index+1}}: {{nombre}} - {{apellido}}, Hobby: {{hobby}}, Género: {{genero}}, País: {{pais}}</p>
-                            <button v-if="nombre!==''">Editar</button>
-                        </li>
-                    </ul>
-                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">N°</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Hobby</th>
+                            <th scope="col">Género</th>
+                            <th scope="col">País</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="({nombre, apellido, hobby, genero, pais}, index) in lista">
+                            <th scope="row">{{index + 1}}</th>
+                            <td>{{nombre}}</td>
+                            <td>{{apellido}}</td>
+                            <td>{{hobby}}</td>
+                            <td>{{genero}}</td>
+                            <td>{{pais}}</td>
+                            <td>
+                                <button>Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+    
 
                 <script src="../js/app2.js"></script>
             </section>
