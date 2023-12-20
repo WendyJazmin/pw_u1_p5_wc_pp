@@ -16,7 +16,6 @@ const app=Vue.createApp({
    // <p>{{true?'Verdadero':'Falso'}}</p>
    // `/*dentro de las llaves contiene o es considerado código javascript*/
     /*programación declarativa a partir de las 2 llaves de apertura y de cierre*/
-    
     /**siempre se debe separar la parte visual de la parte de javascript/ */
 /* vue trabaja con opciones, sed llaman options API, una de esas opciones se llama templates */
 
